@@ -31,9 +31,11 @@ public class Ranking {
 			myjson = new JSONObject(the_json);
 			if (the_json != null) {
 				JSONArray playersArrayJSON = myjson.getJSONArray("players");
+				mPlayers = new Player[playersArrayJSON.length()];
 
 				for (int i = 0; i < playersArrayJSON.length(); i++) {
 					JSONObject player = (JSONObject) playersArrayJSON.get(i);
+					Log.i(TAG,player.getString("username"));
 					mPlayers[i] = new Player(player.getString("id"),
 							player.getString("username"),
 							player.getString("avatar"),
@@ -43,7 +45,7 @@ public class Ranking {
 							player.getInt("countLosts"),
 							player.getInt("countDraws"),
 							player.getInt("countScoredGoals"),
-							player.getInt("concededGoals"));
+							player.getInt("countConcededGoals"));
 				}
 			}
 		} catch (JSONException e) {
