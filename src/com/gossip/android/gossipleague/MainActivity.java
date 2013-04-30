@@ -1,19 +1,11 @@
 package com.gossip.android.gossipleague;
 
-import java.io.IOException;
-
-import org.json.JSONException;
-
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
-import android.util.Log;
+import android.support.v4.app.FragmentManager;
 
-import com.gossip.android.gossipleague.entities.Ranking;
 import com.gossip.android.gossipleague.fragments.RankingFragment;
-import com.gossip.android.gossipleague.utils.UrlFetcher;
 
 public class MainActivity extends FragmentActivity {
 
